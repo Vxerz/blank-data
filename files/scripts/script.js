@@ -24,7 +24,7 @@ function openGame(game) {
   /*
   window.open("../games/" + game + ".html");
   */
-  parentURL = window.parent.location;
+  parentURL = document.referrer;
   console.log(parentURL);
   var path = parentURL.split('/');
   var path = path.slice(0, path.length-1).join('/') + '/';
