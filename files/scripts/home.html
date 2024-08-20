@@ -35,9 +35,8 @@
   <script type="text/javascript" src="script.js"></script>
   <script>
     console.log("WORKING")
-    if (parent == window) {
+    if (window.location == window.parent.location) {
       console.log("NOT IFRAME")
-      window.location.assign("about:blank");
     }
   </script>
 </body>
