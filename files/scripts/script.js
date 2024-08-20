@@ -21,15 +21,16 @@ for (let i = 0; i < Object.keys(games).length; i++) {
 
 function openGame(game) {
   console.log(game)
-  /*
-  window.open("../games/" + game + ".html");
-  */
-  parentURL = location.ancestorOrigins;
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+    var results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+  parentURL = getParameterByName('parentURL');
   console.log(parentURL);
-  var path = parentURL.split('/');
-  var path = path.slice(0, path.length-1).join('/') + '/';
-  path = path + "game.html?game=" + game + ".html";
-  console.log(path)
+  path = parentURL + "game.html?game=" + game + ".html";
+  console.log(path);
   window.open(path);
 
 }
