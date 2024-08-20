@@ -21,7 +21,17 @@ for (let i = 0; i < Object.keys(games).length; i++) {
 
 function openGame(game) {
   console.log(game)
+  /*
   window.open("../games/" + game + ".html");
+  */
+  parentURL = document.referrer
+  console.log(parentURL);
+  var path = parentURL.split('/');
+  var path = path.slice(0, path.length-1).join('/') + '/';
+  path = path + "game.html?game=" + game + ".html";
+  console.log(path)
+  window.open(path);
+
 }
 
 function suggest() {

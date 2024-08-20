@@ -34,8 +34,10 @@
   <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script>
-    if (parent !== window) {
-      console.log("NOT-IFRAME");
+    console.log("WORKING")
+    if (parent == window) {
+      console.log("NOT IFRAME")
+      window.location.assign("about:blank");
     }
   </script>
 </body>
