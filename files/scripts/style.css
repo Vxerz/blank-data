@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Oxygen+Mono&family=Quicksand:wght@700&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  margin: 50px;
+  padding: 50px;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(#1F1F23, #0d363d);
+  background-attachment: fixed;
+  font-family: "varela round", sans-serif;
+}
+
+#update {
+  top: 5px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: #ff4a4a;
+  font-family: "varela round", sans-serif;
+  text-shadow: 0px 0px 10px #ff4a4a;
+  font-size: 35px;
+  user-select: none;
+}
+
+#title-holder {
+  position: absolute;
+  top: 160px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0px;
+  user-select: none;
+  text-wrap: nowrap;
+}
+
+#title {
+  position: absolute;
+  font-style: bold;
+  font-size: 100px;
+  color: #16B7D4;
+  text-shadow: 0px 0px 10px #131415;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0px;
+  user-select: none;
+}
+
+.grid {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  padding-bottom: 200px;
+  gap: 5px;
+}
+
+.grid-item {
+  border-radius: 5px;
+  height: 200px;
+  font-size: 25px;
+  font-style: bold;
+  transition: 0.5s;
+  flex: 20%;
+  box-shadow: 0px 0px 10px #131415;
+  background-color: #131415;
+  border: none;
+  color: #16B7D4;
+  user-select: none;
+  text-shadow: 0px 0px 10px #145a66;
+}
+
+.grid-item:hover {
+  background-color: #145A66;
+  color: #1A1A1F;
+  text-shadow: 0px 0px 10px #061e22;
+}
+
+.grid-item:first-child,
+.grid-item:nth-child(2) {
+  flex-basis: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#search {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  padding: 5px;
+  width: 25%;
+  height: 40px;
+  border-bottom: 2px solid #16B7D4;
+  margin-top: 100px;
+  transition: 0.25s;
+}
+
+#search:hover {
+  width: 30%;
+}
+
+#search>input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  left: 40px;
+  width: 75%;
+  background-color: transparent;
+  border: none;
+  font-size: 35px;
+  outline: none;
+  color: #16B7D4;
+  font-family: "varela round", sans-serif;
+}
+
+#search>i {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+}
+
+#search>i:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon"
+    href="https://cdn.glitch.global/cb0cdc92-20f1-4922-aa24-afffa798f7cb/settings.png">
+  <title>Settings</title>
+  <script>
+    master = window.parent.document;
+    head = master.getElementsByTagName("head")[0];
+    favicon = master.createElement("link");
+    favicon.rel = "shortcut icon";
+    favicon.type = "image/png";
+    favicon.href = "https://cdn.glitch.global/cb0cdc92-20f1-4922-aa24-afffa798f7cb/settings.png";
+    head.appendChild(favicon);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+  <p id="update"></p>
+    <div id="title-holder">
+      <h1 id="title">Blank Games</h1>
+
+    </div>
+
+    <div id="game-holder" class="grid">
+      <button class="grid-item" onclick="suggest()">Suggest A Game</button>
+      <button class="grid-item" onclick="newVersion()">Get Newest Site Version</button>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
