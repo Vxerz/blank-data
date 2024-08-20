@@ -21,17 +21,7 @@ for (let i = 0; i < Object.keys(games).length; i++) {
 
 function openGame(game) {
   console.log(game)
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-    var results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-  parentURL = getParameterByName('parentURL');
-  console.log(parentURL);
-  path = parentURL + "game.html?game=" + game + ".html";
-  console.log(path);
-  window.open(path);
+  window.location.href = "../games/" + game + ".html";
 
 }
 
