@@ -1,5 +1,3 @@
-id = "10BGWWbHdwepr3rW-JJ2_B7Hf3fpeq1lJ";
-
 function checkVersions(newestVersion, currentVersion) {
   console.log("Newest Version: ", newestVersion);
   console.log("Current Version: ", currentVersion);
@@ -41,7 +39,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
 checkVersions(version, myVersion);
-
+console.log(localStorage.getItem("home"));
 localStorage.setItem("home", true);
 console.log("inner:")
 console.log(localStorage.getItem("home"));

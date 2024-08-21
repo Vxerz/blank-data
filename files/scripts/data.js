@@ -1,4 +1,6 @@
-version = "1.0"
+version = "1.0";
+
+id = "1ERKacjmy-8ZxvyPDig20AfPSbOhazsbT";
 
 games = {
     "2048": "2048",
@@ -9,7 +11,10 @@ games = {
     "Asteroids": "asteroids",
     "Ball Blast": "ball-blast",
     "Black Jack": "black-jack",
+    "Bubbles 200": "bubbles-200",
     "Bullet Train II": "bullet-train-ii",
+    "Connect 4": "connect-4",
+    "Drifting Sim 6": "drifting-sim-6",
     "Flappy Bird": "flappy-bird",
     "Getting Over It": "getting-over-it",
     "Level EATEN!": "level-eaten",
@@ -30,6 +35,7 @@ games = {
     "Slash Knight": "slash-knight",
     "Slime Smash Ultimate": "slime-smash-ultimate",
     "Slither.io": "slither-io",
+    "Stack 2D": "stack-2d",
     "Super Mario Kart": "super-mario-kart",
     "Submersible": "submersible",
     "Terraria": "terraria",
