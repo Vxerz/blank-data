@@ -20,9 +20,9 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 </head>
-
+<button onclick="share()" id="share">Share</button>
+<p id="update"></p>
 <body>
-  <p id="update"></p>
     <div id="title-holder">
       <h1 id="title">Blank Games</h1>
 
@@ -33,12 +33,6 @@
       <button class="grid-item" onclick="newVersion()">Get Newest Site Version</button>
   <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="script.js"></script>
-  <script>
-    console.log("WORKING")
-    if (window.location == window.parent.location) {
-      console.log("NOT IFRAME")
-    }
-  </script>
 </body>
 
 </html>

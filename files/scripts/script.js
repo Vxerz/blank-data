@@ -1,6 +1,4 @@
-fetch('https://blankgames-version.glitch.me/version.json')
-.then((response) => response.json())
-.then((json) => checkVersions(json.version, version));
+id = "10BGWWbHdwepr3rW-JJ2_B7Hf3fpeq1lJ";
 
 function checkVersions(newestVersion, currentVersion) {
   console.log("Newest Version: ", newestVersion);
@@ -10,6 +8,7 @@ function checkVersions(newestVersion, currentVersion) {
     document.getElementById("update").innerHTML = "!! SITE NOT UP TO DATE !!";
   }
 }
+
 for (let i = 0; i < Object.keys(games).length; i++) {
   let obj = games[Object.keys(games)[i]];
   let newGame = document.createElement("button");
@@ -30,5 +29,14 @@ function suggest() {
 }
 
 function newVersion() {
-  window.open("https://docs.google.com/document/d/1ziUHhhbZyTE3vOWQDvwW__YfHLrMeArcS0HHKNH-vd8/edit?usp=sharing")
+  window.open("https://drive.google.com/uc?export=download&id=" + id)
 }
+
+function share() {
+  window.open("https://mail.google.com/mail/u/0/?fs=1&su=Site%20Download&body=" + encodeURIComponent("https://drive.google.com/uc?export=download&id=" + id) + "&tf=cm");
+}
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const myVersion = urlParams.get('version');
+checkVersions(version, myVersion);
