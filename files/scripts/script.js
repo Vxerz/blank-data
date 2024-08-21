@@ -5,7 +5,7 @@ function checkVersions(newestVersion, currentVersion) {
   console.log("Current Version: ", currentVersion);
   if (newestVersion != currentVersion) {
     console.log("NOT SYNCED");
-    document.getElementById("update").innerHTML = "!! SITE NOT UP TO DATE !!";
+    document.getElementById("update").innerHTML = "!! OPENER NOT UP TO DATE !!";
   }
 }
 
@@ -19,6 +19,7 @@ for (let i = 0; i < Object.keys(games).length; i++) {
 }
 
 function openGame(game) {
+  localStorage.setItem("home", false);
   console.log(game)
   window.location.href = "../games/" + game + ".html";
 
@@ -40,3 +41,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
 checkVersions(version, myVersion);
+
+localStorage.setItem("home", true);
+console.log("inner:")
+console.log(localStorage.getItem("home"));
