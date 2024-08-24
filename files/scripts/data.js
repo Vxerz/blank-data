@@ -18,6 +18,7 @@ games = {
     "Flappy Bird": "flappy-bird",
     "Getting Over It": "getting-over-it",
     "Level EATEN!": "level-eaten",
+    "Low Res Lines": "low-res-lines",
     "Mage Royale": "mage-royale",
     "Minecraft MMO": "minecraft-mmo",
     "Mini Golf": "mini-golf",

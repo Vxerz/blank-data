@@ -17,9 +17,9 @@ for (let i = 0; i < Object.keys(games).length; i++) {
 }
 
 function openGame(game) {
-  localStorage.setItem("home", false);
   console.log(game)
-  window.location.href = "../games/" + game + ".html";
+  window.location.href = "./game.html?game=" + game;
+  //window.location.href = "../games/" + game + ".html";
 
 }
 
@@ -38,8 +38,15 @@ function share() {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
-checkVersions(version, myVersion);
-console.log(localStorage.getItem("home"));
-localStorage.setItem("home", true);
-console.log("inner:")
-console.log(localStorage.getItem("home"));
+
+const page = localStorage.get("page");
+if (page == null)
+{
+  localStorage.setItem("page", {"isHome": true, "currentGame": ""})
+}
+console.log(page);
+if (!page["isHome"])
+{
+  console.log(page["currentGame"])
+  window.location.href = "./game.html?game=" + page["currentGame"];
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html,body,iframe {
+                width: 100%;
+                height: 100%;
+                scrollbar-width: 0;
+                margin:0;
+                padding:0;
+                border: none;
+                overflow:hidden;
+            }
+
+        </style>
+    </head>
+    <body>
+        <iframe id="game"></iframe>
+    </body>
+    <script src="data.js"></script>
+    <script>
+const gameSearch = window.location.search;
+const gameParams = new URLSearchParams(gameSearch);
+const currentGame = gameParams.get('game');
+console.log(currentGame);
+game = document.getElementById("game");
+game.src = "../games/" + game + ".html"
+localStorage.set("page" = {"isHome": false, "currentGame": game})
+    </script>
+</html>
