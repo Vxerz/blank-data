@@ -45,7 +45,7 @@ if (page == null)
   localStorage.setItem("page", {"isHome": true, "currentGame": ""})
 }
 console.log(page);
-if (!page["isHome"])
+if (page["isHome"] !== undefined)
 {
   console.log(page["currentGame"])
   window.location.href = "./game.html?game=" + page["currentGame"];
