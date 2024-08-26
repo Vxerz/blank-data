@@ -42,11 +42,11 @@ const myVersion = urlParams.get('version');
 const page = localStorage.getItem("page");
 if (page == null)
 {
-  localStorage.setItem("page", {"isHome": true, "currentGame": ""})
+  localStorage.setItem("page", {"isHome": true, "currentGame": ""});
 }
-console.log(page);
+console.log("page: " + page);
 if (page["isHome"] !== undefined)
 {
-  console.log(page["currentGame"])
+  console.log("current game: " + page["currentGame"])
   window.location.href = "./game.html?game=" + page["currentGame"];
 }
