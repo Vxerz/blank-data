@@ -30,6 +30,7 @@ const currentGame = gameParams.get('game');
 game = document.getElementById("game");
 game.src = "../games/" + currentGame + ".html"
 console.log(game.src);
+console.log(JSON.parse(localStorage.getItem("page"))["isHome"]);
 localStorage.setItem("page", JSON.stringify({"isHome": false, "currentGame": currentGame}))
 
 function home()
