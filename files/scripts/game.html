@@ -11,18 +11,32 @@
                 border: none;
                 overflow:hidden;
             }
-            button {
-                position: fixed;
-                top: 5px;
-                left: 5px;
-            }
+            #home {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  font-size: 18.75px;
+  background-color: transparent;
+  transition-duration: 0.4s;
+  z-index: 10;
+  color: #16B7D4;
+  font-family: "varela round", sans-serif;
+  user-select: none;
+  text-align: center;
+  text-shadow: 0px 0px 5px #16B7D4;
+}
         </style>
     </head>
     <body>
         <iframe id="game"></iframe>
-        <button onclick="home()">Home</button>
+        <button id="home" onclick="home()"><i class="fa-solid fa-house fa-xl" style="color: #16B7D4;"></i></button>
     </body>
     <script src="data.js"></script>
+    <script src="https://kit.fontawesome.com/b4169c8082.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
 const gameSearch = window.location.search;
 const gameParams = new URLSearchParams(gameSearch);
@@ -38,5 +52,9 @@ function home()
     localStorage.setItem("page", JSON.stringify({"isHome": true, "currentGame": undefined}))
     window.location.href = "./home.html?version=" + version;
 }
+$('#home').hover(
+       function(){ $(this).addClass('fa-fade') },
+       function(){ $(this).removeClass('fa-fade') }
+)
     </script>
 </html>
