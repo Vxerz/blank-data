@@ -24,8 +24,8 @@ const gameParams = new URLSearchParams(gameSearch);
 const currentGame = gameParams.get('game');
 console.log(currentGame);
 game = document.getElementById("game");
-game.src = "../games/" + game + ".html"
+game.src = "../games/" + currentGame + ".html"
 console.log(game.src);
-localStorage.setItem("page", {"isHome": false, "currentGame": game})
+localStorage.setItem("page", {"isHome": false, "currentGame": currentGame})
     </script>
 </html>
