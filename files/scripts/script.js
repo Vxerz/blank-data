@@ -39,7 +39,10 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
 
-const page = localStorage.getItem("page");
+var page = localStorage.getItem("page");
+console.log(localStorage.getItem("page"));
+localStorage.setItem("test", "why not working");
+console.log(localStorage.getItem("test"));
 if (page == null)
 {
   localStorage.setItem("page", {"isHome": true, "currentGame": ""});
