@@ -11,21 +11,31 @@
                 border: none;
                 overflow:hidden;
             }
-
+            button {
+                position: fixed;
+                top: 5px;
+                left: 5px;
+            }
         </style>
     </head>
     <body>
         <iframe id="game"></iframe>
+        <button onclick="home()">Home</button>
     </body>
     <script src="data.js"></script>
     <script>
 const gameSearch = window.location.search;
 const gameParams = new URLSearchParams(gameSearch);
 const currentGame = gameParams.get('game');
-console.log(currentGame);
 game = document.getElementById("game");
 game.src = "../games/" + currentGame + ".html"
 console.log(game.src);
-localStorage.setItem("page", {"isHome": false, "currentGame": currentGame})
+localStorage.setItem("page", JSON.stringify({"isHome": false, "currentGame": currentGame}))
+
+function home()
+{
+    localStorage.setItem("page", JSON.stringify({"isHome": true, "currentGame": undefined}))
+    window.location.href = "./home.html?version=" + version;
+}
     </script>
 </html>

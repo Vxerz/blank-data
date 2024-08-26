@@ -39,21 +39,13 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
 
-localStorage.setItem("page", {"test": "this is test"});
-
-var page = localStorage.getItem("page");
-console.log("page: " + page);
-console.log("test: " + page["test"]);
-console.log("values: " + Object.values(page));
-localStorage.setItem("test", "why not working");
-console.log(localStorage.getItem("test"));
+var page = JSON.parse(localStorage.getItem("page"));
 if (page == null)
 {
-  localStorage.setItem("page", {"isHome": true, "currentGame": ""});
+  localStorage.setItem("page", {"isHome": true, "currentGame": undefined});
+  var page = JSON.parse(localStorage.getItem("page"));
 }
-console.log("page: " + page);
-if (page["isHome"] !== undefined)
+if (!page["isHome"])
 {
-  console.log("current game: " + page["currentGame"])
   window.location.href = "./game.html?game=" + page["currentGame"];
 }
