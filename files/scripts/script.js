@@ -1,4 +1,3 @@
-var fs = require('fs');
 function checkVersions(newestVersion, currentVersion) {
   console.log("Newest Version: ", newestVersion);
   console.log("Current Version: ", currentVersion);
@@ -12,8 +11,8 @@ for (let i = 0; i < Object.keys(games).length; i++) {
   let obj = games[Object.keys(games)[i]];
   let newGame = document.createElement("button");
   newGame.classList.add("grid-item");
-  newGame.innerHTML = Object.keys(games)[i];
-  newGame.onclick = function() {openGame(games[Object.keys(games)[i]])};
+  newGame.innerHTML = games[Object.keys(games)[i]];
+  newGame.onclick = function() {openGame(Object.keys(games)[i])};
   document.getElementById("game-holder").appendChild(newGame);
 }
 
@@ -40,8 +39,6 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
 console.log("working");
-var files = fs.readdirSync('../games/');
-console.log(files);
 checkVersions(myVersion, version);
 
 var page = JSON.parse(localStorage.getItem("page"));
