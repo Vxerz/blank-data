@@ -1,6 +1,6 @@
-version = "1.0";
+version = "1.1";
 
-id = "1ERKacjmy-8ZxvyPDig20AfPSbOhazsbT";
+id = "1DAdcKgOvcPJlk4sZrLOVB1KAI2Y_wXyV";
 
 games = {
     "2048": "2048",
