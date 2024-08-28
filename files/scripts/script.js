@@ -1,3 +1,4 @@
+var fs = require('fs');
 function checkVersions(newestVersion, currentVersion) {
   console.log("Newest Version: ", newestVersion);
   console.log("Current Version: ", currentVersion);
@@ -38,7 +39,10 @@ function share() {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
-checkVersions(myVersion, version)
+console.log("working");
+var files = fs.readdirSync('../games/');
+console.log(files);
+checkVersions(myVersion, version);
 
 var page = JSON.parse(localStorage.getItem("page"));
 if (page == null)
