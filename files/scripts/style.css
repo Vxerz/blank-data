@@ -137,27 +137,3 @@ body {
 #search>i:hover {
   transform: scale(1.1);
 }
-
-#share {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #16B7D4;
-  width: 125px;
-  height: 37.5px;
-  font-size: 18.75px;
-  background-color: transparent;
-  border-radius: 5px;
-  transition-duration: 0.4s;
-  z-index: 10;
-  color: #16B7D4;
-  font-family: "varela round", sans-serif;
-  box-shadow: 0px 0px 5px #16B7D4;
-  user-select: none;
-}
-
-#share:hover {
-  background-color: #52d7ee3b;
-}

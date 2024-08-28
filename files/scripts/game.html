@@ -52,9 +52,14 @@ function home()
     localStorage.setItem("page", JSON.stringify({"isHome": true, "currentGame": undefined}))
     window.location.href = "./home.html?version=" + version;
 }
+
 $('#home').hover(
        function(){ $(this).addClass('fa-fade') },
        function(){ $(this).removeClass('fa-fade') }
 )
+
+function share() {
+  window.open("https://mail.google.com/mail/u/0/?fs=1&su=Site%20Download&body=" + encodeURIComponent("https://drive.google.com/uc?export=download&id=" + id) + "&tf=cm");
+}
     </script>
 </html>
