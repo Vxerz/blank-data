@@ -7,6 +7,8 @@ function checkVersions(newestVersion, currentVersion) {
   }
 }
 
+checkVersions()
+
 for (let i = 0; i < Object.keys(games).length; i++) {
   let obj = games[Object.keys(games)[i]];
   let newGame = document.createElement("button");
@@ -38,6 +40,7 @@ function share() {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myVersion = urlParams.get('version');
+checkVersions(myVersion, version)
 
 var page = JSON.parse(localStorage.getItem("page"));
 if (page == null)
