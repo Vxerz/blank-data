@@ -7,8 +7,6 @@ function checkVersions(newestVersion, currentVersion) {
   }
 }
 
-checkVersions()
-
 for (let i = 0; i < Object.keys(games).length; i++) {
   let obj = games[Object.keys(games)[i]];
   let newGame = document.createElement("button");
