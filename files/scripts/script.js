@@ -1,4 +1,3 @@
-var fs = require('fs');
 function checkVersions(newestVersion, currentVersion) {
   console.log("Newest Version: ", newestVersion);
   console.log("Current Version: ", currentVersion);
